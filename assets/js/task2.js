@@ -1,3 +1,10 @@
+/**
+ * Checks if a is divisible by b
+ *
+ * @param {number} a - first number
+ * @param {number} b - second number
+ * @returns {boolean} true if divisible without a remainder, otherwise false
+ */
 function checkMultiplicity(a, b) {
   return a % b === 0;
 }
