@@ -7,3 +7,7 @@ const calculateSurfaceArea = function (shapeType, param1, param2 = 1) {
   }
   return 0;
 };
+
+const calculatePaintBoxes = function (area, layersCount = 1) {
+  return Math.ceil(area * 0.1 * layersCount);
+};
