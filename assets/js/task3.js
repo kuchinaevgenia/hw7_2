@@ -11,3 +11,9 @@ const calculateSurfaceArea = function (shapeType, param1, param2 = 1) {
 const calculatePaintBoxes = function (area, layersCount = 1) {
   return Math.ceil(area * 0.1 * layersCount);
 };
+
+const getPaintInfo = function (shapeType, param1, param2 = 1, layersCount = 1) {
+  const area = calculateSurfaceArea(shapeType, param1, param2);
+  const boxes = calculatePaintBoxes(area, layersCount);
+  return `Для фарбування фігури ${shapeType} у ${layersCount} шарів необхідно придбати ${boxes} банок фарби.`;
+};
