@@ -1,5 +1,7 @@
+const PAINT_PER_M2 = 0.1;
+
 /**
- * 
+ *
  * @param {string} shapeType -shape type for painting
  * @param {number} param1 - edge for cube, radius for cylinder
  * @param {number} param2 - height for cylinder
@@ -16,20 +18,20 @@ const calculateSurfaceArea = function (shapeType, param1, param2 = 1) {
 };
 
 /**
- * 
+ *
  * @param {number} area - area for painting
  * @param {number} layersCount - number of layers for painting
  * @returns {number} number of paint boxes
  */
 const calculatePaintBoxes = function (area, layersCount = 1) {
-  return Math.ceil(area * 0.1 * layersCount);
+  return Math.ceil(area * PAINT_PER_M2 * layersCount);
 };
 
 /**
- * 
+ *
  * @param {string} shapeType -shape type for painting
  * @param {number} param1 - edge for cube, radius for cylinder
- * @param {number} param2 - height for cylinder 
+ * @param {number} param2 - height for cylinder
  * @param {number} layersCount - number of layers for painting
  * @returns {string} summary information for painting
  */
